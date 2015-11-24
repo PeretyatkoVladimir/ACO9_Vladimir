@@ -5,6 +5,11 @@ public class RopeWalker extends Stuff {
 
     private double percent;
 
+    public RopeWalker() {
+        super();
+        percent = 0;
+    }
+
     public RopeWalker(String name, double salary, double percent) {
         super(name, salary);
         this.percent = percent;

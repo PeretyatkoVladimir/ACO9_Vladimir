@@ -7,9 +7,11 @@ public class Stuff implements Serializable {
 
     private String name;
     private double salary;
+    private int acted;
 
     public Stuff() {
         this.name = "empty object";
+        this.acted = 0;
         this.salary = 0.0;
     }
 
