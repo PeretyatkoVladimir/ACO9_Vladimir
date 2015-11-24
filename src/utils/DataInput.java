@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class DataInput {
 
-
-
     public static int nextOnlyInt(Scanner sc) {
 
         boolean cantExit = true;
