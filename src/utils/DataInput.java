@@ -38,5 +38,4 @@ public class DataInput {
         return number;
     }
 
-
 }

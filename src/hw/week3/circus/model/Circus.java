@@ -11,6 +11,7 @@ public class Circus {
   private Location location;
 
     public Circus() {
+      this.artists = new ArrayList<>();
     }
 
     // task 1
@@ -28,7 +29,7 @@ public class Circus {
   }
   
   // task 5
-  public String viewArtistsActed() {
+  public String getViewArtistsActed() {
     String allArtistsActed = "";
     for (Artist a : artists) {
       allArtistsActed += a + ", acted - " + a.getActed() + " times. /n";
@@ -37,7 +38,7 @@ public class Circus {
   } 
   
   // task 6
-  public String getviewArtistsSalary() {
+  public String getViewArtistsSalary() {
     String allArtistsSalary = "";
     for (Artist a : artists) {
         allArtistsSalary += a + ", salary - " + a.getSalary() + "/n";
