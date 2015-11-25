@@ -29,4 +29,8 @@ public class RopeWalker extends Stuff {
                 ", percent=" + percent +
                 '}';
     }
+    
+    public void viewPlay() {
+        System.out.println("Rope walker: - Scientist cat walks on chain circle!");
+    }
 }
