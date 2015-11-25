@@ -16,5 +16,9 @@ public class Acrobat extends Stuff {
         super(name, salary);
         drunks = 0;
     }
+    
+    public void viewPlay() {
+        System.out.println("Acrobat: - I am not drunk! But i have some botle of vodka!");
+    }
 
 }
