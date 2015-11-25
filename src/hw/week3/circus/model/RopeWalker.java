@@ -32,5 +32,6 @@ public class RopeWalker extends Stuff {
     
     public void viewPlay() {
         System.out.println("Rope walker: - Scientist cat walks on chain circle!");
+        acted++;
     }
 }
