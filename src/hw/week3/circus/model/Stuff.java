@@ -27,7 +27,11 @@ public class Stuff implements Serializable {
     public double getSalary() {
         return salary;
     }
-
+    
+    public double getActed() {
+        return acted;
+    }
+    
     public void setName(String name) {
         this.name = name;
     }
