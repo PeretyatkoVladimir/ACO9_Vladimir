@@ -1,7 +1,7 @@
 package hw.week3.circus.model;
 
 
-public class RopeWalker extends Stuff {
+public class RopeWalker extends Artist {
 
     private double percent;
 
@@ -23,15 +23,14 @@ public class RopeWalker extends Stuff {
 
     @Override
     public String toString() {
-        return "Stuff{" +
+        return "Rope walker{" +
                 "name='" + super.getName()  +
                 ", salary=" + super.getSalary() +
-                ", percent=" + percent +
                 '}';
     }
     
-    public void viewPlay() {
-        System.out.println("Rope walker: - Scientist cat walks on chain circle!");
-        acted++;
+    public String doWork() {
+        super.incActed();
+        return "Rope walker: - Scientist cat walks on chain circle!";
     }
 }

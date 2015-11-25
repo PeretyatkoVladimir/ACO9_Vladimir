@@ -3,21 +3,22 @@ package hw.week3.circus.model;
 import java.io.Serializable;
 
 
-public class Stuff implements Serializable {
+public class Artist implements Serializable {
 
     private String name;
     private double salary;
     private int acted;
 
-    public Stuff() {
+    public Artist() {
         this.name = "empty object";
         this.acted = 0;
         this.salary = 0.0;
     }
 
-    public Stuff(String name, double salary) {
+    public Artist(String name, double salary) {
         this.name = name;
         this.salary = salary;
+        this.acted = 0;
     }
 
     public String getName() {
@@ -40,9 +41,18 @@ public class Stuff implements Serializable {
         this.salary = salary;
     }
 
+    public void incActed() {
+        this.acted++;
+    }
+
+    public String doWork() {
+        this.incActed();
+        return "I am work";
+    }
+
     @Override
     public String toString() {
-            return "Stuff{" +
+            return "Artist{" +
                     "name='" + name  +
                     ", salary=" + salary +
                     '}';

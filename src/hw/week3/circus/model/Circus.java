@@ -1,39 +1,46 @@
-package hw.week3.circus;
+package hw.week3.circus.model;
 
+
+import hw.week3.circus.model.*;
+
+import java.util.ArrayList;
 
 public class Circus {
   
-  private ArrayList<Stuff> artists;
+  private ArrayList<Artist> artists;
   private Location location;
-  
-  // task 1
-  public String viewArtists() {
+
+    public Circus() {
+    }
+
+    // task 1
+  public String getViewAllArtists() {
     String allArtists = "";
-    for (Stuff a : artists) {
+    for (Artist a : artists) {
       allArtists += a + "/n";
     }
     return allArtists;
   }
   
   // task 4
-  public String goPlay(Stuff artist) {
-    return artist.viewPlay();
+  public String getWorkResult(Artist artist) {
+    return artist.doWork();
   }
   
   // task 5
   public String viewArtistsActed() {
     String allArtistsActed = "";
-    for (Stuff a : artists) {
+    for (Artist a : artists) {
       allArtistsActed += a + ", acted - " + a.getActed() + " times. /n";
     }
     return allArtistsActed;
   } 
   
   // task 6
-  public String viewArtistsSalary() {
+  public String getviewArtistsSalary() {
     String allArtistsSalary = "";
-    for (Stuff a : artists) {
-      allArtistsActed += a + ", salary - " + a.getSalary() + "/n";
+    for (Artist a : artists) {
+        allArtistsSalary += a + ", salary - " + a.getSalary() + "/n";
     }
     return allArtistsSalary;
   } 

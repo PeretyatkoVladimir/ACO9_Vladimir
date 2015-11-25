@@ -1,9 +1,6 @@
 package hw.week3.circus.model;
 
-/**
- * Created by Valdess on 24.11.2015.
- */
-public class Acrobat extends Stuff {
+public class Acrobat extends Artist {
 
     int drunks;
 
@@ -17,8 +14,9 @@ public class Acrobat extends Stuff {
         drunks = 0;
     }
     
-    public void viewPlay() {
-        System.out.println("Acrobat: - I am not drunk! But i have some botle of vodka!");
+    @Override
+    public String doWork() {
+        return "Acrobat: - I am not drunk! But i have some botle of vodka!";
     }
 
 }
