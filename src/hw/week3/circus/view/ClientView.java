@@ -97,7 +97,6 @@ public class ClientView {
             System.out.println("4| 0. Previous");
 
             Integer userChoice = DataInput.nextOnlyInt(sc);
-
             if (userChoice == 0) {
                 cantExit = false;
             } else if (hashMap.containsKey(userChoice)) {
