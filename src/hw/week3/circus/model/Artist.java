@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 
-public class Artist implements Serializable {
+public class Artist {
 
     private String name;
     private double salary;

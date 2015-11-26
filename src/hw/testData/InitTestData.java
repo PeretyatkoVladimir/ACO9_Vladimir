@@ -29,4 +29,5 @@ public class InitTestData {
         return new Circus(artists, new Location("Kiev", "Frunze 103"));
 
     }
+
 }
