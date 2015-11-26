@@ -50,35 +50,73 @@ public class ClientView {
     public static boolean mainMenuExitLogic(Circus circus, Scanner sc) {
         System.out.println("Good bye scumbag!");
         return false;
-
     }
 
-    public static void mainMenu1Logic(Circus circus, Scanner sc){
+    public static void mainMenu1Logic(Circus circus, Scanner sc) {
         System.out.println(circus.getViewAllArtists());
     }
 
-    public static void mainMenu2Logic(Circus circus, Scanner sc){
-        System.out.println(2);
+    public static void mainMenu2Logic(Circus circus, Scanner sc) {
+
+        boolean cantExit = true;
+        while (cantExit) {
+
+            System.out.println("2| 1. Recruit acrobat");
+            System.out.println("2| 2. Recruit rope walker");
+            System.out.println("2| 0. Previous");
+
+            int userChoise = DataInput.nextOnlyInt(sc);
+
+            if (userChoise == 0) {
+                cantExit = false;
+            } else if (userChoise == 1) {
+                circus.addNewArtistAcrobat(sc);
+                cantExit = false;
+            } else if (userChoise == 2) {
+                circus.addNewRopeWalker(sc);
+                cantExit = false;
+            }
+        }
     }
 
-    public static void mainMenu3Logic(Circus circus, Scanner sc){
+    public static void mainMenu3Logic(Circus circus, Scanner sc) {
         System.out.println(3);
     }
 
-    public static void mainMenu4Logic(Circus circus, Scanner sc){
+    public static void mainMenu4Logic(Circus circus, Scanner sc) {
         System.out.println(4);
     }
 
-    public static void mainMenu5Logic(Circus circus, Scanner sc){
+    public static void mainMenu5Logic(Circus circus, Scanner sc) {
         System.out.println(circus.getViewArtistsActed());
     }
 
-    public static void mainMenu6Logic(Circus circus, Scanner sc){
+    public static void mainMenu6Logic(Circus circus, Scanner sc) {
         System.out.println(circus.getViewArtistsSalary());
     }
 
-    public static void mainMenu7Logic(Circus circus, Scanner sc){
-        System.out.println(7);
+    public static void mainMenu7Logic(Circus circus, Scanner sc) {
+
+        boolean cantExit = true;
+        while (cantExit) {
+
+            System.out.println("7| 1. View current location");
+            System.out.println("7| 2. Change location");
+            System.out.println("7| 0. Previous");
+
+            int userChoise = DataInput.nextOnlyInt(sc);
+
+            if (userChoise == 0) {
+                cantExit = false;
+            } else if (userChoise == 1) {
+                System.out.println(circus.getLocation());
+                cantExit = false;
+            } else if (userChoise == 2) {
+                circus.changeLocation(sc);
+                cantExit = false;
+            }
+        }
+
     }
 
     public static void start(Circus circus) {

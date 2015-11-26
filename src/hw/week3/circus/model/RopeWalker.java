@@ -1,6 +1,10 @@
 package hw.week3.circus.model;
 
 
+import utils.DataInput;
+
+import java.util.Scanner;
+
 public class RopeWalker extends Artist {
 
     private double percent;
@@ -25,10 +29,16 @@ public class RopeWalker extends Artist {
     public String toString() {
         return "Rope walker{" +
                 "name='" + super.getName()  +
-                ", salary=" + super.getSalary() +
                 '}';
     }
-    
+
+    public static Artist createNewArtist(Scanner sc) {
+        String name    = DataInput.nextStr(sc,        "Please enter name:");
+        double salary  = DataInput.nextOnlyDouble(sc, "Please enter salary:");
+        double percent = DataInput.nextOnlyDouble(sc, "Please enter percent:");
+        return new RopeWalker(name, salary, percent);
+    }
+
     public String doWork() {
         super.incActed();
         return "Rope walker: - Scientist cat walks on chain circle!";

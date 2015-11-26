@@ -1,6 +1,9 @@
 package hw.week3.circus.model;
 
+import utils.DataInput;
+
 import java.io.Serializable;
+import java.util.Scanner;
 
 
 public class Artist implements Serializable {
@@ -50,11 +53,16 @@ public class Artist implements Serializable {
         return "I am work";
     }
 
+    public static Artist createNewArtist(Scanner sc) {
+        String name = DataInput.nextStr(sc, "Please enter name:");
+        double salary = DataInput.nextOnlyDouble(sc, "Please enter salary:");
+        return new Artist(name, salary);
+    }
+
     @Override
     public String toString() {
             return "Artist{" +
-                    "name='" + name  +
-                    ", salary=" + salary +
+                    "name='" + name +
                     '}';
         }
 }
