@@ -78,4 +78,5 @@ public class DataInput {
         System.out.println(message);
         return sc.next();
     }
+
 }
