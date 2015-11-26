@@ -4,6 +4,7 @@ package hw.week3.circus.model;
 import hw.week3.circus.model.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Circus {
@@ -46,14 +47,26 @@ public class Circus {
         addArtist(RopeWalker.createNewArtist(sc));
     }
 
-    //task 3
+    // task 3
     public void remArtist(Artist artist) {
         this.artists.remove(artist);
     }
 
     // task 4
-    public String getWorkResult(Artist artist) {
-        return artist.doWork();
+    public void getViewWorkResult(Artist artist) {
+        System.out.println(artist.doWork());
+    }
+
+    public HashMap<Integer, Artist> getHasMapOfArtists() {
+
+        HashMap<Integer, Artist> hashMap = new HashMap<>();
+
+        Integer i = 1;
+        for (Artist a : this.artists) {
+            hashMap.put(i, a);
+            i++;
+        }
+        return hashMap;
     }
 
     // task 5

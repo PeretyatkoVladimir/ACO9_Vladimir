@@ -32,7 +32,8 @@ public class Acrobat extends Artist {
 
     @Override
     public String doWork() {
-        return "Acrobat: - I am not drunk! But i have some botle of vodka!";
+        super.incActed();
+        return "Acrobat, " + this.getName() + ": - I am not drunk! But i have some botle of vodka!";
     }
 
 }

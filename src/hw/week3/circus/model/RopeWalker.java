@@ -28,7 +28,7 @@ public class RopeWalker extends Artist {
     @Override
     public String toString() {
         return "Rope walker{" +
-                "name='" + super.getName()  +
+                "name='" + this.getName()  +
                 '}';
     }
 
@@ -41,6 +41,6 @@ public class RopeWalker extends Artist {
 
     public String doWork() {
         super.incActed();
-        return "Rope walker: - Scientist cat walks on chain circle!";
+        return "Rope walker, " + this.getName() + ": - Scientist cat walks on chain circle!";
     }
 }

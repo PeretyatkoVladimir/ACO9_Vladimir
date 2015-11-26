@@ -23,8 +23,8 @@ public class InitTestData {
         artists.add(ropeWalker3);
 
         artists.add(acrobat1);
-        artists.add(acrobat1);
-        artists.add(acrobat1);
+        artists.add(acrobat2);
+        artists.add(acrobat3);
 
         return new Circus(artists, new Location("Kiev", "Frunze 103"));
 

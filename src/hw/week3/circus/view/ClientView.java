@@ -1,13 +1,14 @@
 package hw.week3.circus.view;
 
 
+import hw.week3.circus.model.Artist;
 import hw.week3.circus.model.Circus;
 import utils.DataInput;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class ClientView {
-
 
     public static void showMainMenu() {
 
@@ -84,7 +85,26 @@ public class ClientView {
     }
 
     public static void mainMenu4Logic(Circus circus, Scanner sc) {
-        System.out.println(4);
+
+        boolean cantExit = true;
+        while (cantExit) {
+
+            HashMap<Integer, Artist> hashMap = circus.getHasMapOfArtists();
+
+            for (Integer i = 1; i <= hashMap.size(); i++) {
+                System.out.println("4| " + i + ". " + hashMap.get(i));
+            }
+            System.out.println("4| 0. Previous");
+
+            Integer userChoice = DataInput.nextOnlyInt(sc);
+
+            if (userChoice == 0) {
+                cantExit = false;
+            } else if (hashMap.containsKey(userChoice)) {
+                circus.getViewWorkResult(hashMap.get(userChoice));
+                cantExit = false;
+            }
+        }
     }
 
     public static void mainMenu5Logic(Circus circus, Scanner sc) {
