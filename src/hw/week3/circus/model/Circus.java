@@ -52,6 +52,16 @@ public class Circus {
         this.artists.remove(artist);
     }
 
+    public ArrayList<Acrobat> getAcrobatsOnly() {
+        ArrayList<Acrobat> acrobats = new ArrayList<>();
+        for (Artist a : this.artists) {
+            if (a instanceof Acrobat) {
+                acrobats.add((Acrobat) a);
+            }
+        }
+        return acrobats;
+    }
+
     // task 4
     public void getViewWorkResult(Artist artist) {
         System.out.println(artist.doWork());

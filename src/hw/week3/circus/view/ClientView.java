@@ -81,7 +81,7 @@ public class ClientView {
     }
 
     public static void mainMenu3Logic(Circus circus, Scanner sc) {
-        System.out.println(3);
+
     }
 
     public static void mainMenu4Logic(Circus circus, Scanner sc) {

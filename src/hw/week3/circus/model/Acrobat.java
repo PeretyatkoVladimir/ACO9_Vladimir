@@ -31,18 +31,6 @@ public class Acrobat extends Artist implements Comparable {
                 '}';
     }
 
-    public int compareTo(Object anObject) {
-
-        Acrobat anAcrobat = (Acrobat)anObject;
-        if(this.drunks < anAcrobat.drunks) {
-            return -1;
-        } else if(this.drunks > anAcrobat.drunks) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-
     public static Acrobat findDrunkestAcrobat(ArrayList<Acrobat> acrobats) {
 
         if (acrobats.size() == 0)  {
@@ -65,4 +53,15 @@ public class Acrobat extends Artist implements Comparable {
         return "Acrobat, " + this.getName() + ": - I am not drunk! But i have some botle of vodka!";
     }
 
+    @Override
+    public int compareTo(Object anObject) {
+        Acrobat anAcrobat = (Acrobat)anObject;
+        if(this.drunks < anAcrobat.drunks) {
+            return -1;
+        } else if(this.drunks > anAcrobat.drunks) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
