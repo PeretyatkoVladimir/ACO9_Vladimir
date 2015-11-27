@@ -1,6 +1,7 @@
 package hw.week3.circus.view;
 
 
+import hw.week3.circus.model.Acrobat;
 import hw.week3.circus.model.Artist;
 import hw.week3.circus.model.Circus;
 import utils.DataInput;
@@ -81,6 +82,31 @@ public class ClientView {
     }
 
     public static void mainMenu3Logic(Circus circus, Scanner sc) {
+
+        Acrobat acrobat = circus.getDrunkestAcrobat();
+
+        if (acrobat == null) {
+            System.out.println("Acrobat not found!");
+            return;
+        }
+
+        boolean cantExit = true;
+        while (cantExit) {
+
+            System.out.println("Drunkest acrobat is " + acrobat);
+            System.out.println("3| 1. Dismiss?");
+            System.out.println("3| 0. Previous?");
+
+            int userChoise = DataInput.nextOnlyInt(sc);
+
+            if (userChoise == 0) {
+                cantExit = false;
+            } else if (userChoise == 1) {
+                circus.remArtist(acrobat);
+                cantExit = false;
+            }
+        }
+
 
     }
 

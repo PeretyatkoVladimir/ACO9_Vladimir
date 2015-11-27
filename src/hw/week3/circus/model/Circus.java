@@ -62,6 +62,11 @@ public class Circus {
         return acrobats;
     }
 
+    public Acrobat getDrunkestAcrobat() {
+        ArrayList<Acrobat> acrobats = getAcrobatsOnly();
+        return Acrobat.findDrunkestAcrobat(acrobats);
+    }
+
     // task 4
     public void getViewWorkResult(Artist artist) {
         System.out.println(artist.doWork());
