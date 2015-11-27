@@ -24,6 +24,17 @@ public class Acrobat extends Artist implements Comparable {
         double salary = DataInput.nextOnlyDouble(sc, "Please enter salary:");
         return new Acrobat(name, salary);
     }
+    
+    public int compareTo(Object anObject) {
+        Acrobat anAcrobat = (Acrobat)anObject;
+        if(this.drunks < anAcrobat.drunks) {
+            return -1;
+        } else if(this.student_id > tmp.student_id) {
+            return 1;
+        } else {
+            return 0;  
+        }
+    }
 
     public String toString() {
         return "Acrobat{" +
