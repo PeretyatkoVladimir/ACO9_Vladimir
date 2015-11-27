@@ -61,6 +61,7 @@ public class ClientView {
     public static void mainMenu2Logic(Circus circus, Scanner sc) {
 
         boolean cantExit = true;
+
         while (cantExit) {
 
             System.out.println("2| 1. Recruit acrobat");
@@ -91,6 +92,7 @@ public class ClientView {
         }
 
         boolean cantExit = true;
+
         while (cantExit) {
 
             System.out.println("Drunkest acrobat is " + acrobat);
@@ -106,8 +108,6 @@ public class ClientView {
                 cantExit = false;
             }
         }
-
-
     }
 
     public static void mainMenu4Logic(Circus circus, Scanner sc) {

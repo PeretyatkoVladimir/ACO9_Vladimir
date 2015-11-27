@@ -1,6 +1,7 @@
 package hw.week3.circus.model;
 
 import utils.DataInput;
+import utils.OwnMath;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class Acrobat extends Artist implements Comparable {
         Acrobat max = acrobats.get(0);
 
         for (Acrobat a : acrobats) {
-            if (max.compareTo(a) > 0) {
+            if (max.compareTo(a) < 0) {
                 max = a;
             }
         }
@@ -49,8 +50,16 @@ public class Acrobat extends Artist implements Comparable {
 
     @Override
     public String doWork() {
-        super.incActed();
-        return "Acrobat, " + this.getName() + ": - I am not drunk! But i have some botle of vodka!";
+
+        int acrobatIsDrunk = OwnMath.getRandomInt(0, 10);
+
+        if (acrobatIsDrunk > 4) {
+            drunks++;
+            return "Acrobat, " + this.getName() + " is fucked up";
+        } else {
+            super.incActed();
+            return "Acrobat, " + this.getName() + ": - I am not drunk! But i have some botle of vodka!";
+        }
     }
 
     @Override
