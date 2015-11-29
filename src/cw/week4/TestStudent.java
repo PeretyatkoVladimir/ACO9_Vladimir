@@ -2,7 +2,7 @@ package cw.week4;
 
 public class TestStudent {
 
-    protected String data[];
+    private String data[];
 
     public TestStudent(String name, String surname) {
         this.data = new String[2];
@@ -17,7 +17,6 @@ public class TestStudent {
     public String[] getDataClone() {
         return this.data.clone();
     }
-
 
     @Override
     public String toString(){

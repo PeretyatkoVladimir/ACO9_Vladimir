@@ -6,30 +6,25 @@ public class CloneTest {
 
         // case 1.
 
-        TestStudent student1 = new TestStudent("Vladimir", "Pupkin");
+        TestStudent student1 = new TestStudent("Alex", "Pupkin");
         System.out.println(student1);
 
-
-        String[] data = student1.getData();
-        data[0] = "Vasya";
-        data[1] = "Sokolov";
+        String[] data1 = student1.getData();
+        data1[0] = "Vasya";
+        data1[1] = "Sokol";
 
         System.out.println(student1);
 
         // case 2.
 
-        TestStudent student2 = new TestStudent("Vladimir", "Pupkin");
+        TestStudent student2 = new TestStudent("Alex", "Pupkin");
         System.out.println(student2);
 
         String[] data2 = student2.getDataClone();
-        data[0] = "Vasya";
-        data[1] = "Sokolov";
+        data2[0] = "Vasya";
+        data2[1] = "Sokol";
 
         System.out.println(student2);
     }
-
-
-
-
 
 }
