@@ -1,12 +1,13 @@
 package hw.testData;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import hw.week3.circus.model.*;
+import hw.week4.stack.ArrayStack;
 
 import java.util.ArrayList;
 
 public class InitTestData {
 
+    // <<< Home work 3 ---
     public static Circus hwWeek3Circus() {
 
         RopeWalker ropeWalker1 = new RopeWalker("Peter", 1600, 5);
@@ -29,5 +30,18 @@ public class InitTestData {
         return new Circus(artists, new Location("Kiev", "Frunze 103"));
 
     }
+    // --- Home work 3 >>>
 
+    // <<< Home work 4 ---
+
+    public static ArrayStack hwWeek4ArrayStack() {
+
+        ArrayStack arrayStack = new ArrayStack();
+        for (int i = 1; i < 13; i ++) {
+            arrayStack.push(i);
+        }
+        return arrayStack;
+    }
+
+    // --- Home work 4 >>>
 }
