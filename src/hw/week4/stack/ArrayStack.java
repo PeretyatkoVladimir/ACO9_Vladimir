@@ -27,7 +27,7 @@ public class ArrayStack implements IStack {
         decTop();
 
         if (isEmpty()) {
-            throw new StackException("Stack is empty"); 
+            throw new StackException("Stack is empty");
             //return null;
         }
 
@@ -76,11 +76,5 @@ public class ArrayStack implements IStack {
             this.stack = Arrays.copyOf(this.stack, this.stack.length + DEFAULT_STEP_INC_SIZE);
         }
     }
-    
-    public class StackException extends RuntimeException { 
-            public StackException(String message) { 
-                  super(message); 
-            } 
-      } 
-    
+
 }
