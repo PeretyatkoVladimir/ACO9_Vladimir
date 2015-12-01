@@ -18,7 +18,7 @@ public class Main {
             System.out.println(arrayStack);
         }
 
-        // Array Stack
+        // Linked Stack
         LinkedStack linkedStack = InitTestData.hwWeek4LinkedStack();
 
         System.out.println(linkedStack);
@@ -28,7 +28,4 @@ public class Main {
             System.out.println(linkedStack);
         }
     }
-
-
-
 }

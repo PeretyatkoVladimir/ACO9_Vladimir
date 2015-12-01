@@ -59,7 +59,7 @@ public class ArrayStack implements IStack {
     @Override
     public String toString() {
         String strRes = "{ ";
-        for (int i = 0; i < this.top; i++) {
+        for (int i = this.top - 1; i >= 0; i--) {
             strRes += this.stack[i] + " ";
         }
         return strRes + "}";

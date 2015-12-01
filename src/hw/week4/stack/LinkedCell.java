@@ -22,6 +22,4 @@ public class LinkedCell {
         return this.link;
     }
 
-
-
 }

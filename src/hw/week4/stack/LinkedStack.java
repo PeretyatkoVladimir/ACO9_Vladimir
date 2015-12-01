@@ -59,7 +59,7 @@ public class LinkedStack implements IStack {
         if (isEmpty()) {
             return "{ }";
         }
-        return "{" + getStackAsString(this.top) + "}";
+        return "{ " + getStackAsString(this.top) + " }";
     }
 
     private String getStackAsString(LinkedCell cell){
