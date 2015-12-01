@@ -2,6 +2,7 @@ package hw.testData;
 
 import hw.week3.circus.model.*;
 import hw.week4.stack.ArrayStack;
+import hw.week4.stack.LinkedStack;
 
 import java.util.ArrayList;
 
@@ -41,6 +42,14 @@ public class InitTestData {
             arrayStack.push(i);
         }
         return arrayStack;
+    }
+
+    public static LinkedStack hwWeek4LinkedStack() {
+        LinkedStack linkedStack = new LinkedStack();
+        for (int i = 1; i < 13; i ++) {
+            linkedStack.push(i);
+        }
+        return linkedStack;
     }
 
     // --- Home work 4 >>>

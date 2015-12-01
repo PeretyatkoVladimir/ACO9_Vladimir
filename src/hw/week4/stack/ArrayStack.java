@@ -27,7 +27,7 @@ public class ArrayStack implements IStack {
         decTop();
 
         if (isEmpty()) {
-            throw new StackException("Stack is empty");
+            throw new StackException("Stack is empty!");
             //return null;
         }
 
