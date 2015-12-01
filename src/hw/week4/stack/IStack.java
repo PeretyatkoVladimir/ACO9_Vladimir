@@ -9,5 +9,7 @@ public interface IStack {
     void clear();
 
     int size();
+    
+    boolean isEmpty();
 
 }
