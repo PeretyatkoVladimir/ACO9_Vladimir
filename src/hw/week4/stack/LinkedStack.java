@@ -46,7 +46,7 @@ public class LinkedStack implements IStack {
         if(cell.getLink() == null){
             return 1;
         }
-        return getSize(cell) + 1;
+        return getSize(cell.getLink()) + 1;
     }
 
     @Override

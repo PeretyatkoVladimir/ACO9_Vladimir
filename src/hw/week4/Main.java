@@ -24,7 +24,7 @@ public class Main {
         System.out.println(linkedStack);
 
         for (int i = 0; i < 18; i++) {
-            System.out.println("POP - " + linkedStack.pop());
+            System.out.println("POP - " + linkedStack.pop() + ", size -" + linkedStack.size());
             System.out.println(linkedStack);
         }
     }
