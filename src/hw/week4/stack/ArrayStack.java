@@ -26,7 +26,7 @@ public class ArrayStack implements IStack {
 
         decTop();
 
-        if (top == 0 && this.stack[top] == null) {
+        if (isEmpty()) {
             throw new StackException("Stack is empty"); 
             //return null;
         }
@@ -45,7 +45,15 @@ public class ArrayStack implements IStack {
 
     @Override
     public int size() {
-        return top;
+        if (isEmpty()) {
+            return 0;
+        }
+        return top + 1;
+    }
+    
+    @Override
+    public boolean isEmpty() {
+        return top == 0 && this.stack[top] == null;
     }
 
     @Override
