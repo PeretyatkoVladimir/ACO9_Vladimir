@@ -21,5 +21,9 @@ public class LinkedCell {
     public LinkedCell getLink () {
         return this.link;
     }
+    
+    public resetLink () {
+        this.link = null;
+    }
 
 }
