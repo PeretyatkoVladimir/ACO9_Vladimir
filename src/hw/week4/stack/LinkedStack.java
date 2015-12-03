@@ -1,5 +1,7 @@
 package hw.week4.stack;
 
+import hw.week4.LinkedCell;
+
 public class LinkedStack implements IStack {
 
     private LinkedCell top;

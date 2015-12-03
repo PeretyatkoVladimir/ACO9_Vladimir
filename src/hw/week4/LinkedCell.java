@@ -1,11 +1,13 @@
-package hw.week4.stack;
+package hw.week4;
+
+import java.util.LinkedList;
 
 public class LinkedCell {
 
     private Object value;
     private LinkedCell link;
 
-    LinkedCell(Object value) {
+    public LinkedCell(Object value) {
         this.value = value;
         this.link = null;
     }
@@ -22,7 +24,7 @@ public class LinkedCell {
         return this.link;
     }
     
-    public resetLink () {
+    public void resetLink () {
         this.link = null;
     }
 
